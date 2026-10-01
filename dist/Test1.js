@@ -11,9 +11,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const utils = require('./Utils').utils;
 const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
     if (utils.add(2, 3) === 5) {
+        console.log("Test passed!");
     }
     else {
-        console.log(1);
-        return;
+        console.error("Test failed: utils.add(2, 3) !== 5");
+        process.exit(1);
     }
 });
+unit_test();

@@ -13,11 +13,5 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
       - name: Run Test1
         run: node dist/Test1.js
